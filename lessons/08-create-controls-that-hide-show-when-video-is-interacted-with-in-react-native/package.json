@@ -1,5 +1,5 @@
 {
-	"name": "02-use-local-files-or-remote-video-files-with-react-native-video",
+	"name": "08-create-controls-that-hide-show-when-video-is-interacted-with-in-react-native",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -8,7 +8,9 @@
 	},
 	"dependencies": {
 		"react": "16.8.6",
-		"react-native": "0.59.9",
+		"react-native": "^0.60.0",
+		"react-native-progress": "^3.6.0",
+		"react-native-vector-icons": "^6.6.0",
 		"react-native-video": "^4.4.2"
 	},
 	"devDependencies": {

@@ -26,44 +26,43 @@ export default class rnvideo extends Component {
   };
 
   handleMainButtonTouch = () => {
+
     if (this.state.progress >= 1) {
       this.player.seek(0);
     }
 
     this.setState(state => {
       return {
-        paused: !state.paused,
-      };
-    });
-  };
+        paused: !state.paused
+      }
+    })
+  }
 
-  handleProgressPress = e => {
+  handleProgressPress = (e) => {
     const position = e.nativeEvent.locationX;
     const progress = (position / 250) * this.state.duration;
-    const isPlaying = !this.state.paused;
-    
     this.player.seek(progress);
   };
 
-  handleProgress = progress => {
-    this.setState({
-      progress: progress.currentTime / this.state.duration,
-    });
-  };
-
   handleEnd = () => {
-    this.setState({ paused: true });
+    this.setState({ paused: true, progress: 1 })
   };
 
-  handleLoad = meta => {
+  handleProgress = (progress) => {
+    this.setState({
+      progress: progress.currentTime / this.state.duration
+    })
+  }
+
+  handleLoad = (meta) => {
     this.setState({
       duration: meta.duration,
-    });
-  };
+    })
+  }
 
   render() {
     const { width } = Dimensions.get("window");
-    const height = width * 0.5625;
+    const height = width * .5625;
 
     return (
       <View style={styles.container}>
@@ -76,9 +75,7 @@ export default class rnvideo extends Component {
             onLoad={this.handleLoad}
             onProgress={this.handleProgress}
             onEnd={this.handleEnd}
-            ref={ref => {
-              this.player = ref;
-            }}
+            ref={ref => this.player = ref}
           />
           <View style={styles.controls}>
             <TouchableWithoutFeedback onPress={this.handleMainButtonTouch}>
@@ -96,7 +93,6 @@ export default class rnvideo extends Component {
                 />
               </View>
             </TouchableWithoutFeedback>
-
             <Text style={styles.duration}>
               {secondsToTime(Math.floor(this.state.progress * this.state.duration))}
             </Text>

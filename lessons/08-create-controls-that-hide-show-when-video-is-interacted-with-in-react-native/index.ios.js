@@ -59,7 +59,7 @@ export default class rnvideo extends Component {
   };
 
   handleEnd = () => {
-    this.setState({ paused: true });
+    this.setState({ paused: true, progress: 1 });
   };
 
   handleLoad = meta => {

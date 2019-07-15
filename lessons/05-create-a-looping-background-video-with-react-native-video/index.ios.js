@@ -8,7 +8,11 @@ export default class rnvideo extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Video repeat source={LightVideo} resizeMode="cover" style={StyleSheet.absoluteFill} />
+        <Video
+          repeat
+          source={LightVideo}
+          resizeMode="cover" style={StyleSheet.absoluteFill}
+        />
         <View>
           <Text style={styles.header}>Login</Text>
           <TextInput
@@ -34,9 +38,8 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 30,
-    color: "#FFF",
     backgroundColor: "transparent",
-    textAlign: "center"
+    color: "#FFF"
   },
   input: {
     width: 300,

@@ -7,15 +7,15 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"react": "16.0.0-alpha.6",
-		"react-native": "0.44.2",
-		"react-native-video": "^1.0.0"
+		"react": "16.8.6",
+		"react-native": "0.59.10",
+		"react-native-video": "^4.4.2"
 	},
 	"devDependencies": {
-		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "1.9.2",
-		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.6"
+		"babel-jest": "24.8.0",
+		"babel-preset-react-native": "4.0.1",
+		"jest": "24.8.0",
+		"react-test-renderer": "16.8.6"
 	},
 	"jest": {
 		"preset": "react-native"

@@ -9,7 +9,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 export default class rnvideo extends Component {
   state = {
     buffering: true,
-    animated: new Animated.Value(0),
+    animated: new Animated.Value(0)
   };
 
   handleLoadStart = () => {
@@ -17,7 +17,6 @@ export default class rnvideo extends Component {
   };
 
   triggerBufferAnimation = () => {
-    this.loopingAnimation && this.loopingAnimation.stopAnimation();
     this.loopingAnimation = Animated.loop(
       Animated.timing(this.state.animated, {
         toValue: 1,
@@ -48,7 +47,9 @@ export default class rnvideo extends Component {
     });
 
     const rotateStyle = {
-      transform: [{ rotate: interpolatedAnimation }],
+      transform: [
+        { rotate: interpolatedAnimation }
+      ],
     };
 
     return (
