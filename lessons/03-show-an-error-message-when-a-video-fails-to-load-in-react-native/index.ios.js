@@ -8,12 +8,13 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 export default class rnvideo extends Component {
   state = {
-    error: false,
+    error: false
   };
-  handleError = meta => {
+  handleError = (meta) => {
     const { error: { code } } = meta;
 
     let error = "An error has occurred playing this video";
+
     switch (code) {
       case -11800:
         error = "Could not load video from URL";
@@ -21,7 +22,7 @@ export default class rnvideo extends Component {
     }
 
     this.setState({
-      error,
+      error
     });
   };
   render() {

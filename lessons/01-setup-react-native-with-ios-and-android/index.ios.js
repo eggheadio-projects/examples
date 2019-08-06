@@ -5,11 +5,13 @@ import {
   Text,
   View
 } from 'react-native';
+
+import Video from "react-native-video";
 export default class rnvideo extends Component {
   render() {
     return (
       <View style={styles.container}>
-
+        <Video/>
       </View>
     );
   }

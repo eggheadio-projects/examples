@@ -9,7 +9,7 @@ export default class rnvideo extends Component {
     return (
       <View style={styles.container}>
         <Video
-          source={LightVideo}
+          source={{ uri: "https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761" }}
           resizeMode="cover"
           style={StyleSheet.absoluteFill}
         />
