@@ -12,8 +12,10 @@ Clone the repository and install all required packages using
 $ npm install
 ```
 
+in each of the lesson folders, not the root of the project. 
+
 ## Run
 
-Open the `rnvideo.xcodeproj` file located in `/fundamentals-of-react-native-video/lessons/lesson/ios/rnvideo.xcodeproj/`.
+Open the `rnvideo.xcodeproj` file located in `/fundamentals-of-react-native-video/lessons/<lesson>/ios/rnvideo.xcodeproj/`.
 
 Once in Xcode, build the project with the play button found in the top left and wait for the simulator to begin running.
